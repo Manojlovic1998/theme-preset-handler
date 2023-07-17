@@ -1,23 +1,19 @@
 {
-  "name": "theme-preset-handler",
-  "description": "Programmatically generate presets for your pages.",
+  "name": "@workspace/root",
+  "private": true,
+  "description": "Root monorepo of @nemanja/theme-preset-handler",
   "keywords": [
     "theme",
     "react",
     "theming"
   ],
-  "type": "module",
   "author": "Nemanja Manojlovic <contact@nemanjamanojlovic.com>",
   "license": "gpl-2.0",
-  "version": "1.0.0",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "lint": "eslint src --ext ts --max-warnings 0",
-    "build": "tsc"
-  },
-  "repository": {
-    "type": "git",
-    "url": ""
+    "lint": "eslint packages/*/src/** --ext ts custom-new-tab/src/**/*",
+    "build": "lerna run build",
+    "dev": " lerna run dev --scope=browser-startpage"
   },
   "dependencies": {
     "color": "^4.2.3"
@@ -26,6 +22,11 @@
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "eslint": "^8.45.0",
+    "lerna": "^7.1.4",
     "typescript": "^5.1.6"
-  }
+  },
+  "workspaces": [
+    "packages/*",
+    "custom-new-tab"
+  ]
 }

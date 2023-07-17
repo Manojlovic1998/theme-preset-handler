@@ -1,11 +1,11 @@
-import Color from "color"
+import Color from "color";
 
 import {
   ColorGradient,
   ColorPalette,
   ColorScheme,
   GreyScale,
-} from "./ColorScheme"
+} from "./ColorScheme";
 
 const defaultPalette: ColorPalette = {
   red: "#E06C75",
@@ -15,39 +15,40 @@ const defaultPalette: ColorPalette = {
   purple: "#C678DD",
   cyan: "#56B6C2",
   orange: "#FFBB7C",
-}
+};
 
 const getGreyScale = (base: string): GreyScale => {
-  const color = Color(base)
+  const color = Color(base);
   return {
     shade: color.darken(0.2).hex(),
     base: color.hex(),
     surface: color.lighten(0.2).hex(),
     highlight: color.lighten(0.4).hex(),
-  }
-}
+  };
+};
 
 const getColorGradient = (base: string, isInverted: boolean): ColorGradient => {
-  const color = Color(base)
+  console.log("Hello World!");
+  const color = Color(base);
   if (isInverted)
     return {
       bg: color.lighten(0.5).hex(),
       base: color.hex(),
       fg: color.darken(0.5).hex(),
-    }
+    };
   return {
     bg: color.darken(0.5).hex(),
     base: color.hex(),
     fg: color.lighten(0.5).hex(),
-  }
-}
+  };
+};
 
 export type BaseColors = {
-  bg: string
-  fg: string
-  primary: string
-  secondary: string
-}
+  bg: string;
+  fg: string;
+  primary: string;
+  secondary: string;
+};
 
 /**
  * Function to create color schemes
@@ -73,4 +74,4 @@ export const createColorScheme = (
   secondary: getColorGradient(base.secondary, Color(base.bg).isLight()),
 
   palette,
-})
+});
