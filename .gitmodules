@@ -1,0 +1,3 @@
+[submodule "custom-new-tab"]
+	path = custom-new-tab
+	url = git@github.com:Manojlovic1998/custom-new-tab.git

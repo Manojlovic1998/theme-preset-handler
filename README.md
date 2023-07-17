@@ -1,3 +1,3 @@
 # @nemanja/theme-preset-handler
 
-Use presets for your startpage.
+Programmatically generate presets for your pages.
