@@ -1,0 +1,26 @@
+{
+  "name": "theme-preset-handler",
+  "description": "Programmatically generate presets for your pages.",
+  "keywords": [
+    "theme",
+    "react",
+    "theming"
+  ],
+  "author": "Nemanja Manojlovic <contact@nemanjamanojlovic.com>",
+  "license": "gpl-2.0",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc --init" 
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+    "color": "^4.2.3"
+  },
+  "devDependencies": {
+    "typescript": "^5.1.6"
+  }
+}
