@@ -13,7 +13,8 @@
   "scripts": {
     "lint": "eslint packages/*/src/** --ext ts custom-new-tab/src/**/*",
     "build": "lerna run build --ignore=browser-startpage",
-    "dev": "lerna run dev"
+    "dev": "lerna run dev",
+    "publish": "lerna run build && lerna publish"
   },
   "dependencies": {
     "color": "^4.2.3"

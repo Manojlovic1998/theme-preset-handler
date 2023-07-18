@@ -1,3 +1,3 @@
-# @nemanja/theme-preset-handler
+# @themeforge
 
 Programmatically generate presets for your pages.
