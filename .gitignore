@@ -22,6 +22,6 @@ pnpm-debug.log*
 *.sln
 *.sw?
 
-
 # Project specific ignore files
+*.log
 packages/*/lib
