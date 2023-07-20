@@ -21,10 +21,25 @@ const getGreyScale = (base: string): GreyScale => {
   const color = Color(base);
 
   const greyScale: GreyScale = {
-    shade: color.darken(0.2).rgb().string(),
-    base: color.rgb().string(),
-    surface: color.lighten(0.2).rgb().string(),
-    highlight: color.lighten(0.4).rgb().string(),
+    shade: color
+      .darken(0.2)
+      .rgb()
+      .string()
+      .replace("rgb(", "")
+      .replace(")", ""),
+    base: color.rgb().string().replace("rgb(", "").replace(")", ""),
+    surface: color
+      .lighten(0.2)
+      .rgb()
+      .string()
+      .replace("rgb(", "")
+      .replace(")", ""),
+    highlight: color
+      .lighten(0.4)
+      .rgb()
+      .string()
+      .replace("rgb(", "")
+      .replace(")", ""),
   };
 
   let prop: keyof GreyScale;
@@ -39,9 +54,14 @@ const getColorGradient = (base: string, isInverted: boolean): ColorGradient => {
   const color = Color(base);
   if (isInverted) {
     const invertedColorGradient: ColorGradient = {
-      bg: color.lighten(0.5).rgb().string(),
-      base: color.rgb().string(),
-      fg: color.darken(0.5).rgb().string(),
+      bg: color
+        .lighten(0.5)
+        .rgb()
+        .string()
+        .replace("rgb(", "")
+        .replace(")", ""),
+      base: color.rgb().string().replace("rgb(", "").replace(")", ""),
+      fg: color.darken(0.5).rgb().string().replace("rgb(", "").replace(")", ""),
     };
 
     let prop: keyof ColorGradient;
@@ -54,9 +74,9 @@ const getColorGradient = (base: string, isInverted: boolean): ColorGradient => {
   }
 
   const colorGradient: ColorGradient = {
-    bg: color.darken(0.5).rgb().string(),
-    base: color.rgb().string(),
-    fg: color.lighten(0.5).rgb().string(),
+    bg: color.darken(0.5).rgb().string().replace("rgb(", "").replace(")", ""),
+    base: color.rgb().string().replace("rgb(", "").replace(")", ""),
+    fg: color.lighten(0.5).rgb().string().replace("rgb(", "").replace(")", ""),
   };
 
   let prop: keyof ColorGradient;
