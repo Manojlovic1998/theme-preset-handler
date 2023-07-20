@@ -1,6 +1,6 @@
 {
   "name": "@themeforge/preset",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Programmatically generate presets for your pages.",
   "homepage": "https://github.com/Manojlovic1998/theme-preset-handler#readme",
   "keywords": [
